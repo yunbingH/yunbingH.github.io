@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hello World | Hexo</title>
+  <title>Junit单元测试 | Hexo</title>
   <meta name="keywords" content="">
-  <meta name="description" content="Hello World | Hexo">
+  <meta name="description" content="Junit单元测试 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Redis1. 概念： redis是一款高性能的NOSQL系列的非关系型数据库       1.1.什么是NOSQL         NoSQL(NoSQL &#x3D; Not Only SQL)，意即“不仅仅是SQL”，是一项全新的数据库理念，泛指非关系型的数据库。         随着互联网web2.0网站的兴起，传统的关系数据库在应付web2.0网站，特别是超大规模和高并发的SNS类型的web2.0">
 <meta property="og:type" content="article">
@@ -454,9 +454,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Junit单元测试" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Hello World</h1>
+        <h1 class="article-title">Junit单元测试</h1>
     
     <div class="article-meta">
         
@@ -466,7 +466,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-03-09 10:25:18'>2020-03-09 10:25</time>
+        创建时间:<time class="date" title='更新时间: 2020-03-09 11:42:03'>2020-03-09 10:54</time>
         
     </div>
     <div class="article-meta">
@@ -488,7 +488,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Junit单元测试："><span class="toc-text">Junit单元测试：</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -504,19 +504,55 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <h2 id="Junit单元测试："><a href="#Junit单元测试：" class="headerlink" title="Junit单元测试："></a>Junit单元测试：</h2><p>测试分类：</p>
+<pre><code>1. 黑盒测试：不需要写代码，给输入值，看程序是否能够输出期望的值。
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+     2. 白盒测试：需要写代码的。关注程序具体的执行流程。</code></pre><p>Junit使用：白盒测试</p>
+<p>步骤：</p>
+<ol>
+<li>定义一个测试类(测试用例)<ul>
+<li>建议：<ul>
+<li>测试类名：被测试的类名Test        CalculatorTest</li>
+<li>包名：xxx.xxx.xx.test        cn.test</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>定义测试方法：可以独立运行<ul>
+<li>建议：<pre><code>* 方法名：test测试的方法名        testAdd()  
+* 返回值：void
+* 参数列表：空参</code></pre></li>
+</ul>
+</li>
+<li>给<strong>方法</strong>加@Test注解</li>
+<li>导入junit依赖环境</li>
+</ol>
+<p>判定结果：</p>
+<ul>
+<li><p>红色：失败</p>
+</li>
+<li><p>绿色：成功</p>
+</li>
+<li><p>一般我们会使用断言操作来处理结果</p>
+</li>
+<li><blockquote>
+<pre><code class="java">Assert.assertEquals(期望的结果,运算的结果);</code></pre>
+</blockquote>
+</li>
+</ul>
+<p>补充：</p>
+<ul>
+<li>@Before:<ul>
+<li>修饰的方法会在测试方法之前被自动执行</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>@After:<ul>
+<li>修饰的方法会在测试方法执行之后自动被执行</li>
+</ul>
+</li>
+</ul>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -530,12 +566,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Hello World</p>
+    <p><span class="copy-title">文章标题:</span>Junit单元测试</p>
     
     <p><span class="copy-title">本文作者:</span><a  title="yunbingH">yunbingH</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-03-09, 10:25:18</p>
-    <p><span class="copy-title">最后更新:</span>2020-03-09, 10:25:18</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/03/09/hello-world/" title="Hello World">http://yoursite.com/2020/03/09/hello-world/</a>
+    <p><span class="copy-title">发布时间:</span>2020-03-09, 10:54:11</p>
+    <p><span class="copy-title">最后更新:</span>2020-03-09, 11:42:03</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/03/09/Junit%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" title="Junit单元测试">http://yoursite.com/2020/03/09/Junit%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

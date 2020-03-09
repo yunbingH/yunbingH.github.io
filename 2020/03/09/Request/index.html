@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hello World | Hexo</title>
+  <title>Request | Hexo</title>
   <meta name="keywords" content="">
-  <meta name="description" content="Hello World | Hexo">
+  <meta name="description" content="Request | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Redis1. 概念： redis是一款高性能的NOSQL系列的非关系型数据库       1.1.什么是NOSQL         NoSQL(NoSQL &#x3D; Not Only SQL)，意即“不仅仅是SQL”，是一项全新的数据库理念，泛指非关系型的数据库。         随着互联网web2.0网站的兴起，传统的关系数据库在应付web2.0网站，特别是超大规模和高并发的SNS类型的web2.0">
 <meta property="og:type" content="article">
@@ -454,9 +454,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Request" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Hello World</h1>
+        <h1 class="article-title">Request</h1>
     
     <div class="article-meta">
         
@@ -466,7 +466,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-03-09 10:25:18'>2020-03-09 10:25</time>
+        创建时间:<time class="date" title='更新时间: 2020-03-09 11:42:14'>2020-03-09 11:04</time>
         
     </div>
     <div class="article-meta">
@@ -488,7 +488,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Request"><span class="toc-text">Request</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#BeanUtils工具类，简化数据封装"><span class="toc-text">BeanUtils工具类，简化数据封装</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -504,20 +504,148 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+        <h1 id="Request"><a href="#Request" class="headerlink" title="Request"></a>Request</h1><ol>
+<li>request对象和response对象的原理<ol>
+<li>对象是由服务器创建的。我们来使用它们</li>
+<li>request对象是来获取请求消息，response对象是来设置响应消息</li>
+</ol>
+</li>
+<li>request对象继承体系结构：<br>ServletRequest        –    接口<pre><code>    |    继承
+HttpServletRequest    -- 接口
+    |    实现
+org.apache.catalina.connector.RequestFacade 类(tomcat)</code></pre></li>
+<li>request功能：<ol>
+<li>获取请求消息数据<ol>
+<li>获取请求行数据<ul>
+<li>GET /day14/demo1?name=zhangsan HTTP/1.1</li>
+<li>方法：<ol>
+<li>获取请求方式 ：GET<ul>
+<li>String getMethod()  </li>
+</ul>
+</li>
+<li>(*)获取虚拟目录：/day14<ul>
+<li>String getContextPath()</li>
+</ul>
+</li>
+<li>获取Servlet路径: /demo1<ul>
+<li>String getServletPath()</li>
+</ul>
+</li>
+<li>获取get方式请求参数：name=zhangsan<ul>
+<li>String getQueryString()</li>
+</ul>
+</li>
+<li>(*)获取请求URI：/day14/demo1<ul>
+<li>String getRequestURI():        /day14/demo1</li>
+<li>StringBuffer getRequestURL()  :<a href="http://localhost/test/demo1" target="_blank" rel="noopener">http://localhost/test/demo1</a></li>
+<li>URL:统一资源定位符 ： <a href="http://localhost/day14/demo1" target="_blank" rel="noopener">http://localhost/day14/demo1</a>    中华人民共和国</li>
+<li>URI：统一资源标识符 : /day14/demo1                    共和国</li>
+</ul>
+</li>
+<li>获取协议及版本：HTTP/1.1<ul>
+<li>String getProtocol()</li>
+</ul>
+</li>
+<li>获取客户机的IP地址：<ul>
+<li>String getRemoteAddr()</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>获取请求头数据<ul>
+<li>方法：<ul>
+<li>(*)String getHeader(String name):通过请求头的名称获取请求头的值</li>
+<li>Enumeration<String> getHeaderNames():获取所有的请求头名称</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>获取请求体数据:<ul>
+<li>请求体：只有POST请求方式，才有请求体，在请求体中封装了POST请求的请求参数</li>
+<li>步骤：<ol>
+<li>获取流对象<ul>
+<li>BufferedReader getReader()：获取字符输入流，只能操作字符数据</li>
+<li>ServletInputStream getInputStream()：获取字节输入流，可以操作所有类型数据</li>
+</ul>
+</li>
+<li>再从流对象中拿数据</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>其他功能：<ol>
+<li>获取请求参数通用方式：不论get还是post请求方式都可以使用下列方法来获取请求参数<ol>
+<li>String getParameter(String name):根据参数名称获取参数值    username=zs&amp;password=123</li>
+<li>String[] getParameterValues(String name):根据参数名称获取参数值的数组  hobby=xx&amp;hobby=game</li>
+<li>Enumeration<String> getParameterNames():获取所有请求的参数名称</li>
+<li>Map&lt;String,String[]&gt; getParameterMap():获取所有参数的map集合<ul>
+<li>中文乱码问题<ul>
+<li>get方式：tomcat 8 已经将get方式乱码问题解决</li>
+<li>post方式：会乱码<ul>
+<li>解决：在获取参数前，设置request的编码request.setCharacterEncoding(“utf-8”);</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>请求转发：一种在服务器内部的资源跳转方式<ol>
+<li>步骤：<ol>
+<li>通过request对象获取请求转发器对象：RequestDispatcher getRequestDispatcher(String path)</li>
+<li>使用RequestDispatcher对象来进行转发：forward(ServletRequest request, ServletResponse response) </li>
+</ol>
+</li>
+<li>特点：<ol>
+<li>浏览器地址栏路径不发生变化</li>
+<li>只能转发到当前服务器内部资源中。</li>
+<li>转发是一次请求</li>
+</ol>
+</li>
+<li>共享数据：<ul>
+<li>域对象：一个有作用范围的对象，可以在范围内共享数据</li>
+<li>request域：代表一次请求的范围，一般用于请求转发的多个资源中共享数据</li>
+<li>方法：<ol>
+<li>void setAttribute(String name,Object obj):存储数据</li>
+<li>Object getAttitude(String name):通过键获取值</li>
+<li>void removeAttribute(String name):通过键移除键值对</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>获取ServletContext：<ul>
+<li>ServletContext getServletContext()</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h2 id="BeanUtils工具类，简化数据封装"><a href="#BeanUtils工具类，简化数据封装" class="headerlink" title="BeanUtils工具类，简化数据封装"></a>BeanUtils工具类，简化数据封装</h2><pre><code>    * 用于封装JavaBean的
+1. JavaBean：标准的Java类
+   1. 要求：
+      1. 类必须被public修饰
+      2. 必须提供空参的构造器
+      3. 成员变量必须使用private修饰
+      4. 提供公共setter和getter方法
+   2. 功能：封装数据
+2. 概念：
+               成员变量：
+               属性：setter和getter方法截取后的产物
+                   例如：getUsername() --&gt; Username--&gt; username
+3. 方法：
+                  1. setProperty()
+                  2. getProperty()
+                  3. populate(Object obj , Map map):将map集合的键值对信息，封装到对应的JavaBean对象中</code></pre>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
     </div>
@@ -530,12 +658,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Hello World</p>
+    <p><span class="copy-title">文章标题:</span>Request</p>
     
     <p><span class="copy-title">本文作者:</span><a  title="yunbingH">yunbingH</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-03-09, 10:25:18</p>
-    <p><span class="copy-title">最后更新:</span>2020-03-09, 10:25:18</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/03/09/hello-world/" title="Hello World">http://yoursite.com/2020/03/09/hello-world/</a>
+    <p><span class="copy-title">发布时间:</span>2020-03-09, 11:04:31</p>
+    <p><span class="copy-title">最后更新:</span>2020-03-09, 11:42:14</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/03/09/Request/" title="Request">http://yoursite.com/2020/03/09/Request/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hello World | Hexo</title>
+  <title>JQuery | Hexo</title>
   <meta name="keywords" content="">
-  <meta name="description" content="Hello World | Hexo">
+  <meta name="description" content="JQuery | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Redis1. 概念： redis是一款高性能的NOSQL系列的非关系型数据库       1.1.什么是NOSQL         NoSQL(NoSQL &#x3D; Not Only SQL)，意即“不仅仅是SQL”，是一项全新的数据库理念，泛指非关系型的数据库。         随着互联网web2.0网站的兴起，传统的关系数据库在应付web2.0网站，特别是超大规模和高并发的SNS类型的web2.0">
 <meta property="og:type" content="article">
@@ -454,9 +454,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-JQuery" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Hello World</h1>
+        <h1 class="article-title">JQuery</h1>
     
     <div class="article-meta">
         
@@ -466,7 +466,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-03-09 10:25:18'>2020-03-09 10:25</time>
+        创建时间:<time class="date" title='更新时间: 2020-03-09 11:41:54'>2020-03-09 11:13</time>
         
     </div>
     <div class="article-meta">
@@ -488,7 +488,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JQuery"><span class="toc-text">JQuery</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#高级"><span class="toc-text">高级</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -504,19 +504,383 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <h1 id="JQuery"><a href="#JQuery" class="headerlink" title="JQuery"></a>JQuery</h1><ol>
+<li><p>概念： 一个JavaScript框架。简化JS开发</p>
+<ul>
+<li>jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（或JavaScript框架）。jQuery设计的宗旨    是“write Less，Do More”，即倡导写更少的代码，做更多的事情。它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优    化HTML文档操作、事件处理、动画设计和Ajax交互。</li>
+<li>JavaScript框架：本质上就是一些js文件，封装了js的原生代码而已</li>
+</ul>
+</li>
+<li><p>快速入门</p>
+<ol>
+<li><p>步骤：</p>
+<ol>
+<li><p>下载JQuery</p>
+<ul>
+<li><p>目前jQuery有三个大版本：</p>
+<p>1.x:兼容ie678,使用最为广泛的，官方只做BUG维护，</p>
+<pre><code>功能不再新增。因此一般项目来说，使用1.x版本就可以了，
+最终版本：1.12.4 (2016年5月20日)</code></pre><p>2.x:不兼容ie678，很少有人使用，官方只做BUG维护，</p>
+<pre><code>功能不再新增。如果不考虑兼容低版本的浏览器可以使用2.x，
+最终版本：2.2.4 (2016年5月20日)</code></pre><p>3.x:不兼容ie678，只支持最新的浏览器。除非特殊要求，</p>
+<pre><code>一般不会使用3.x版本的，很多老的jQuery插件不支持这个版本。
+目前该版本是官方主要更新维护的版本。最新版本：3.2.1（2017年3月20日）</code></pre></li>
+<li><p>jquery-xxx.js 与 jquery-xxx.min.js区别：</p>
+<ol>
+<li>jquery-xxx.js：开发版本。给程序员看的，有良好的缩进和注释。体积大一些</li>
+<li>jquery-xxx.min.js：生产版本。程序中使用，没有缩进。体积小一些。程序加载更快</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>导入JQuery的js文件：导入min.js文件</p>
+</li>
+<li><p>使用<code>var div1 = $(&quot;#div1&quot;);alert(div1.html());</code></p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>JQuery对象和JS对象区别与转换</p>
+<ol>
+<li>JQuery对象在操作时，更加方便。</li>
+<li>JQuery对象和js对象方法不通用的.</li>
+<li>两者相互转换<ul>
+<li>jq – &gt; js : jq对象[索引] 或者 jq对象.get(索引)</li>
+<li>js – &gt; jq : $(js对象)</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>选择器：筛选具有相似特征的元素(标签)</p>
+<ol>
+<li><p>基本操作学习：</p>
+<ol>
+<li><p>事件绑定</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.获取b1按钮</span></span><br><span class="line">            $(<span class="string">"#b1"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                alert(<span class="string">"abc"</span>);</span><br><span class="line">            &#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>入口函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	           </span><br><span class="line">   			 &#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.onload  和 $(<span class="function"><span class="keyword">function</span>) 区别</span></span><br><span class="line"><span class="function">                 * <span class="title">window</span>.<span class="title">onload</span> 只能定义一次,如果定义多次，后边的会将前边的覆盖掉</span></span><br><span class="line"><span class="function">                 * <span class="title">$</span>(<span class="params">function</span>)可以定义多次的。</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>样式控制：css方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// $("#div1").css("background-color","red");</span></span><br><span class="line">      		$(<span class="string">"#div1"</span>).css(<span class="string">"backgroundColor"</span>,<span class="string">"pink"</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>分类</p>
+<ol>
+<li>基本选择器<ol>
+<li>标签选择器（元素选择器）<ul>
+<li>语法： $(“html标签名”) 获得所有匹配标签名称的元素</li>
+</ul>
+</li>
+<li>id选择器 <ul>
+<li>语法： $(“#id的属性值”) 获得与指定id属性值匹配的元素</li>
+</ul>
+</li>
+<li>类选择器<ul>
+<li>语法： $(“.class的属性值”) 获得与指定的class属性值匹配的元素</li>
+</ul>
+</li>
+<li>并集选择器：<ul>
+<li>语法： $(“选择器1,选择器2….”) 获取多个选择器选中的所有元素</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>层级选择器<ol>
+<li>后代选择器<ul>
+<li>语法： $(“A B “) 选择A元素内部的所有B元素    </li>
+</ul>
+</li>
+<li>子选择器<ul>
+<li>语法： $(“A &gt; B”) 选择A元素内部的所有B子元素</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>属性选择器<ol>
+<li>属性名称选择器 <ul>
+<li>语法： $(“A[属性名]”) 包含指定属性的选择器</li>
+</ul>
+</li>
+<li>属性选择器<ul>
+<li>语法： $(“A[属性名=’值’]”) 包含指定属性等于指定值的选择器</li>
+</ul>
+</li>
+<li>复合属性选择器<ul>
+<li>语法： $(“A[属性名=’值’][]…”) 包含多个属性条件的选择器</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>过滤选择器<ol>
+<li>首元素选择器<ul>
+<li>语法： :first 获得选择的元素中的第一个元素</li>
+</ul>
+</li>
+<li>尾元素选择器 <ul>
+<li>语法： :last 获得选择的元素中的最后一个元素</li>
+</ul>
+</li>
+<li>非元素选择器<ul>
+<li>语法： :not(selector) 不包括指定内容的元素</li>
+</ul>
+</li>
+<li>偶数选择器<ul>
+<li>语法： :even 偶数，从 0 开始计数</li>
+</ul>
+</li>
+<li>奇数选择器<ul>
+<li>语法： :odd 奇数，从 0 开始计数</li>
+</ul>
+</li>
+<li>等于索引选择器<ul>
+<li>语法： :eq(index) 指定索引元素</li>
+</ul>
+</li>
+<li>大于索引选择器 <ul>
+<li>语法： :gt(index) 大于指定索引元素</li>
+</ul>
+</li>
+<li>小于索引选择器 <ul>
+<li>语法： :lt(index) 小于指定索引元素</li>
+</ul>
+</li>
+<li>标题选择器<ul>
+<li>语法： :header 获得标题（h1~h6）元素，固定写法</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>表单过滤选择器<ol>
+<li>可用元素选择器<ul>
+<li>语法： :enabled 获得可用元素</li>
+</ul>
+</li>
+<li>不可用元素选择器 <ul>
+<li>语法： :disabled 获得不可用元素</li>
+</ul>
+</li>
+<li>选中选择器<ul>
+<li>语法： :checked 获得单选/复选框选中的元素</li>
+</ul>
+</li>
+<li>选中选择器<ul>
+<li>语法： :selected 获得下拉框选中的元素</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>DOM操作</p>
+<ol>
+<li><p>内容操作</p>
+<ol>
+<li>html(): 获取/设置元素的标签体内容   <a><font>内容</font></a>  –&gt; <font>内容</font></li>
+<li>text(): 获取/设置元素的标签体纯文本内容   <a><font>内容</font></a> –&gt; 内容</li>
+<li>val()： 获取/设置元素的value属性值</li>
+</ol>
+</li>
+<li><p>属性操作</p>
+<ol>
+<li><p>通用属性操作</p>
+<ol>
+<li><p>attr(): 获取/设置元素的属性</p>
+</li>
+<li><p>removeAttr():删除属性</p>
+</li>
+<li><p>prop():获取/设置元素的属性</p>
+</li>
+<li><p>removeProp():删除属性</p>
+<p>attr和prop区别？</p>
+<pre><code>1. 如果操作的是元素的固有属性，则建议使用prop
+             2. 如果操作的是元素自定义的属性，则建议使用attr</code></pre></li>
+</ol>
+</li>
+<li><p>对class属性操作</p>
+<ol>
+<li>addClass():添加class属性值</li>
+<li>removeClass():删除class属性值</li>
+<li>toggleClass():切换class属性<ul>
+<li>toggleClass(“one”): <ul>
+<li>判断如果元素对象上存在class=”one”，则将属性值one删除掉。  如果元素对象上不存在class=”one”，则添加</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>css():</li>
+</ol>
+</li>
+<li><p>CRUD操作:</p>
+<ol>
+<li>append():父元素将子元素追加到末尾<ul>
+<li>对象1.append(对象2): 将对象2添加到对象1元素内部，并且在末尾</li>
+</ul>
+</li>
+<li>prepend():父元素将子元素追加到开头<ul>
+<li>对象1.prepend(对象2):将对象2添加到对象1元素内部，并且在开头</li>
+</ul>
+</li>
+<li>appendTo():<ul>
+<li>对象1.appendTo(对象2):将对象1添加到对象2内部，并且在末尾</li>
+</ul>
+</li>
+<li>prependTo()：<ul>
+<li>对象1.prependTo(对象2):将对象1添加到对象2内部，并且在开头</li>
+</ul>
+</li>
+<li>after():添加元素到元素后边<ul>
+<li>对象1.after(对象2)： 将对象2添加到对象1后边。对象1和对象2是兄弟关系</li>
+</ul>
+</li>
+<li>before():添加元素到元素前边<ul>
+<li>对象1.before(对象2)： 将对象2添加到对象1前边。对象1和对象2是兄弟关系</li>
+</ul>
+</li>
+<li>insertAfter()<ul>
+<li>对象1.insertAfter(对象2)：将对象1添加到对象2后边。对象1和对象2是兄弟关系</li>
+</ul>
+</li>
+<li>insertBefore()<ul>
+<li>对象1.insertBefore(对象2)： 将对象1添加到对象2前边。对象1和对象2是兄弟关系</li>
+</ul>
+</li>
+<li>remove():移除元素<ul>
+<li>对象.remove():将对象删除掉</li>
+</ul>
+</li>
+<li>empty():清空元素的所有后代元素。<pre><code>* 对象.empty():将对象的后代元素全部清空，但是保留当前对象以及其属性节点</code></pre></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h2 id="高级"><a href="#高级" class="headerlink" title="高级"></a>高级</h2><ol>
+<li><p>动画</p>
+<ol>
+<li><p>三种方式显示和隐藏元素</p>
+<ol>
+<li><p>默认显示和隐藏方式</p>
+<ol>
+<li><p>show([speed,[easing],[fn]])</p>
+<ol>
+<li><p>参数：</p>
+<ol>
+<li>speed：动画的速度。三个预定义的值(“slow”,”normal”, “fast”)或表示动画时长的毫秒数值(如：1000)<ol start="2">
+<li>easing：用来指定切换效果，默认是”swing”，可用参数”linear”<ul>
+<li>swing：动画执行时效果是 先慢，中间快，最后又慢</li>
+<li>linear：动画执行时速度是匀速的</li>
+</ul>
+</li>
+<li>fn：在动画完成时执行的函数，每个元素执行一次。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>hide([speed,[easing],[fn]])</p>
+</li>
+<li><p>toggle([speed],[easing],[fn])</p>
+</li>
+</ol>
+</li>
+<li><p>滑动显示和隐藏方式</p>
+<ol>
+<li>slideDown([speed],[easing],[fn])</li>
+<li>slideUp([speed,[easing],[fn]])</li>
+<li>slideToggle([speed],[easing],[fn])</li>
+</ol>
+</li>
+<li><p>淡入淡出显示和隐藏方式</p>
+<ol>
+<li>fadeIn([speed],[easing],[fn])</li>
+<li>fadeOut([speed],[easing],[fn])</li>
+<li>fadeToggle([speed,[easing],[fn]])</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>遍历</p>
+<ol>
+<li><p>js的遍历方式</p>
+<ul>
+<li>for(初始化值;循环结束条件;步长)</li>
+</ul>
+</li>
+<li><p>jq的遍历方式</p>
+<ol>
+<li><p>jq对象.each(callback)</p>
+<ol>
+<li><p>语法：<br>jquery对象.each(function(index,element){});</p>
+<pre><code>* index:就是元素在集合中的索引
+* element：就是集合中的每一个元素对象
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+* this：集合中的每一个元素对象</code></pre></li>
+<li><p>回调函数返回值：</p>
+<ul>
+<li>true:如果当前function返回为false，则结束循环(break)。</li>
+<li>false:如果当前function返回为true，则结束本次循环，继续下次循环(continue)</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>$.each(object, [callback])</p>
+</li>
+<li><p>for..of: jquery 3.0 版本之后提供的方式</p>
+<p>for(元素对象 of 容器对象)</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>事件绑定</p>
+<ol>
+<li><p>jquery标准的绑定方式</p>
+<ul>
+<li>jq对象.事件方法(回调函数)；</li>
+<li>注：如果调用事件方法，不传递回调函数，则会触发浏览器默认行为。<ul>
+<li>表单对象.submit();//让表单提交</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>on绑定事件/off解除绑定</p>
+<ul>
+<li>jq对象.on(“事件名称”,回调函数)</li>
+<li>jq对象.off(“事件名称”)<ul>
+<li>如果off方法不传递任何参数，则将组件上的所有事件全部解绑</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>事件切换：toggle</p>
+<ul>
+<li><p>jq对象.toggle(fn1,fn2…)</p>
+<ul>
+<li>当单击jq对象对应的组件后，会执行fn1.第二次点击会执行fn2…..</li>
+</ul>
+</li>
+<li><p>注意：1.9版本 .toggle() 方法删除,jQuery Migrate（迁移）插件可以恢复此功能。</p>
+<script src="../js/jquery-migrate-1.0.0.js" type="text/javascript" charset="utf-8"></script>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -530,12 +894,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Hello World</p>
+    <p><span class="copy-title">文章标题:</span>JQuery</p>
     
     <p><span class="copy-title">本文作者:</span><a  title="yunbingH">yunbingH</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-03-09, 10:25:18</p>
-    <p><span class="copy-title">最后更新:</span>2020-03-09, 10:25:18</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/03/09/hello-world/" title="Hello World">http://yoursite.com/2020/03/09/hello-world/</a>
+    <p><span class="copy-title">发布时间:</span>2020-03-09, 11:13:19</p>
+    <p><span class="copy-title">最后更新:</span>2020-03-09, 11:41:54</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/03/09/JQuery/" title="JQuery">http://yoursite.com/2020/03/09/JQuery/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

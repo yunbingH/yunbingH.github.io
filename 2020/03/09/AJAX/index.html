@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hello World | Hexo</title>
+  <title>AJAX | Hexo</title>
   <meta name="keywords" content="">
-  <meta name="description" content="Hello World | Hexo">
+  <meta name="description" content="AJAX | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Redis1. 概念： redis是一款高性能的NOSQL系列的非关系型数据库       1.1.什么是NOSQL         NoSQL(NoSQL &#x3D; Not Only SQL)，意即“不仅仅是SQL”，是一项全新的数据库理念，泛指非关系型的数据库。         随着互联网web2.0网站的兴起，传统的关系数据库在应付web2.0网站，特别是超大规模和高并发的SNS类型的web2.0">
 <meta property="og:type" content="article">
@@ -454,9 +454,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-AJAX" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Hello World</h1>
+        <h1 class="article-title">AJAX</h1>
     
     <div class="article-meta">
         
@@ -466,7 +466,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-03-09 10:25:18'>2020-03-09 10:25</time>
+        创建时间:<time class="date" title='更新时间: 2020-03-09 11:41:20'>2020-03-09 11:14</time>
         
     </div>
     <div class="article-meta">
@@ -488,7 +488,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -504,19 +504,118 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <ol>
+<li><p>概念： ASynchronous JavaScript And XML    异步的JavaScript 和 XML</p>
+<ol>
+<li><p>异步和同步：客户端和服务器端相互通信的基础上</p>
+<ul>
+<li><p>客户端必须等待服务器端的响应。在等待的期间客户端不能做其他操作。</p>
+</li>
+<li><p>客户端不需要等待服务器端的响应。在服务器处理请求的过程中，客户端可以进行其他的操作。</p>
+<p>Ajax 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。 [1]<br>通过在后台与服务器进行少量数据交换，Ajax 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。<br>传统的网页（不使用 Ajax）如果需要更新内容，必须重载整个网页页面。</p>
+<p>提升用户的体验</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>实现方式：</p>
+<ol>
+<li><p>原生的JS实现方式（了解）</p>
+<pre><code> //1.创建核心对象
+var xmlhttp;
+if (window.XMLHttpRequest)
+{// code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+}
+else
+{// code for IE6, IE5
+    xmlhttp=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+}
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+//2. 建立连接
+/*
+    参数：
+        1. 请求方式：GET、POST
+            * get方式，请求参数在URL后边拼接。send方法为空参
+            * post方式，请求参数在send方法中定义
+        2. 请求的URL：
+        3. 同步或异步请求：true（异步）或 false（同步）
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+ */
+xmlhttp.open(&quot;GET&quot;,&quot;ajaxServlet?username=tom&quot;,true);
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+//3.发送请求
+xmlhttp.send();
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+//4.接受并处理来自服务器的响应结果
+//获取方式 ：xmlhttp.responseText
+//什么时候获取？当服务器响应成功后再获取
+
+//当xmlhttp对象的就绪状态改变时，触发事件onreadystatechange。
+xmlhttp.onreadystatechange=function()
+{
+    //判断readyState就绪状态是否为4，判断status响应状态码是否为200
+    if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)
+    {
+       //获取服务器的响应结果
+        var responseText = xmlhttp.responseText;
+        alert(responseText);
+    }
+}</code></pre></li>
+<li><p>JQeury实现方式</p>
+<ol>
+<li><p>$.ajax()</p>
+<ul>
+<li><p>语法：$.ajax({键值对});<br>//使用$.ajax()发送异步请求<br>  $.ajax({</p>
+<pre><code>url:&quot;ajaxServlet1111&quot; , // 请求路径
+type:&quot;POST&quot; , //请求方式
+//data: &quot;username=jack&amp;age=23&quot;,//请求参数
+data:{&quot;username&quot;:&quot;jack&quot;,&quot;age&quot;:23},
+success:function (data) {
+    alert(data);
+},//响应成功后的回调函数
+error:function () {
+    alert(&quot;出错啦...&quot;)
+},//表示如果请求响应出现错误，会执行的回调函数
+
+dataType:&quot;text&quot;//设置接受到的响应数据的格式</code></pre><p>   });</p>
+</li>
+</ul>
+</li>
+<li><p>$.get()：发送get请求</p>
+<ul>
+<li>语法：$.get(url, [data], [callback], [type])<ul>
+<li>参数：<ul>
+<li>url：请求路径</li>
+<li>data：请求参数</li>
+<li>callback：回调函数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>type：响应结果的类型</li>
+</ul>
+</li>
+<li><p>$.post()：发送post请求</p>
+<ul>
+<li>语法：$.post(url, [data], [callback], [type])<ul>
+<li>参数：<ul>
+<li>url：请求路径</li>
+<li>data：请求参数</li>
+<li>callback：回调函数</li>
+<li>type：响应结果的类型</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -530,12 +629,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Hello World</p>
+    <p><span class="copy-title">文章标题:</span>AJAX</p>
     
     <p><span class="copy-title">本文作者:</span><a  title="yunbingH">yunbingH</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-03-09, 10:25:18</p>
-    <p><span class="copy-title">最后更新:</span>2020-03-09, 10:25:18</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/03/09/hello-world/" title="Hello World">http://yoursite.com/2020/03/09/hello-world/</a>
+    <p><span class="copy-title">发布时间:</span>2020-03-09, 11:14:06</p>
+    <p><span class="copy-title">最后更新:</span>2020-03-09, 11:41:20</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/03/09/AJAX/" title="AJAX">http://yoursite.com/2020/03/09/AJAX/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
