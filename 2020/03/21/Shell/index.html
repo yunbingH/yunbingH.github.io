@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>注解 | Hexo</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="注解 | Hexo">
+  <title>Shell | Hexo</title>
+  <meta name="keywords" content=" Linux ">
+  <meta name="description" content="Shell | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="aaaaaa">
 <meta property="og:type" content="article">
@@ -410,19 +410,25 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-注解" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Shell" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">注解</h1>
+        <h1 class="article-title">Shell</h1>
     
     <div class="article-meta">
         
         
         
+        
+        <span class="tag">
+            
+            <a class="color1">Linux</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-03-09 11:41:17'>2020-03-09 10:57</time>
+        创建时间:<time class="date" title='更新时间: 2020-03-21 13:11:24'>2020-03-21 12:54</time>
         
     </div>
     <div class="article-meta">
@@ -444,7 +450,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#注解"><span class="toc-text">注解</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#作用分类："><span class="toc-text">作用分类：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#JDK中预定义的一些注解"><span class="toc-text">JDK中预定义的一些注解</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#自定义注解"><span class="toc-text">自定义注解</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#元注解：用于描述注解的注解"><span class="toc-text">元注解：用于描述注解的注解</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#在程序使用-解析-注解：获取注解中定义的属性值"><span class="toc-text">在程序使用(解析)注解：获取注解中定义的属性值</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#小结："><span class="toc-text">小结：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -460,137 +466,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h1><ul>
-<li><p>概念：说明程序的。给计算机看的</p>
-</li>
-<li><p>注释：用文字描述程序的。给程序员看的</p>
-</li>
-<li><p>定义：注解（Annotation），也叫元数据。一种代码级别的说明。它是JDK1.5及以后版本引入的一个特性，与类、接口、枚举是在同一个层次。它可以声明在包、类、字段、方法、局部变量、方法参数等的前面，用来对这些元素进行说明，注释。</p>
-</li>
-<li><p>概念描述：</p>
-<ul>
-<li>JDK1.5之后的新特性</li>
-<li>说明程序的</li>
-<li>使用注解：@注解名称</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ul>
-<li><h6 id="作用分类："><a href="#作用分类：" class="headerlink" title="作用分类："></a>作用分类：</h6><p>①编写文档：通过代码里标识的注解生成文档【生成文档doc文档】</p>
-<pre><code>②代码分析：通过代码里标识的注解对代码进行分析【使用反射】
-③编译检查：通过代码里标识的注解让编译器能够实现基本的编译检查【`Override`】</code></pre></li>
-</ul>
-<hr>
-<ul>
-<li><h6 id="JDK中预定义的一些注解"><a href="#JDK中预定义的一些注解" class="headerlink" title="JDK中预定义的一些注解"></a>JDK中预定义的一些注解</h6><ul>
-<li><code>@Override</code>    ：检测被该注解标注的方法是否是继承自父类(接口)的</li>
-<li><code>@Deprecated</code>：该注解标注的内容，表示已过时</li>
-<li><code>@SuppressWarnings</code>：压制警告<ul>
-<li>一般传递参数all  <code>@SuppressWarnings(&quot;all&quot;)</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ul>
-<li><h6 id="自定义注解"><a href="#自定义注解" class="headerlink" title="自定义注解"></a>自定义注解</h6><ul>
-<li><p>格式：<br>元注解</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> 注解名称&#123;</span><br><span class="line">属性列表;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>本质：注解本质上就是一个接口，该接口默认继承Annotation接口</p>
-</li>
-<li><pre><code class="java"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">MyAnno</span> <span class="keyword">extends</span> <span class="title">java</span>.<span class="title">lang</span>.<span class="title">annotation</span>.<span class="title">Annotation</span> </span>{}</code></pre>
-</li>
-</ul>
-<ul>
-<li><p>属性：接口中的抽象方法</p>
-<ul>
-<li><p>要求：</p>
-<ol>
-<li><p>属性的返回值类型有下列取值</p>
-<ul>
-<li>基本数据类型</li>
-<li>String</li>
-<li>枚举</li>
-<li>注解</li>
-<li>以上类型的数组</li>
-</ul>
-</li>
-<li><p>定义了属性，在使用时需要给属性赋值</p>
-<ol>
-<li>如果定义属性时，使用default关键字给属性默认初始化值，则使用注解时，可以不进行属性的赋值。</li>
-<li>如果只有一个属性需要赋值，并且属性的名称是value，则value可以省略，直接定义值即可。</li>
-<li>数组赋值时，值使用{}包裹。如果数组中只有一个值，则{}可以省略</li>
-</ol>
-</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><h6 id="元注解：用于描述注解的注解"><a href="#元注解：用于描述注解的注解" class="headerlink" title="元注解：用于描述注解的注解"></a>元注解：用于描述注解的注解</h6><ul>
-<li><code>@Target</code>：描述注解能够作用的位置<ul>
-<li><code>ElementType</code>取值：<ul>
-<li><code>TYPE</code>：可以作用于类上</li>
-<li><code>METHOD</code>：可以作用于方法上</li>
-<li><code>FIELD</code>：可以作用于成员变量上</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>@Retention</code>：描述注解被保留的阶段<ul>
-<li><code>@Retention(RetentionPolicy.RUNTIME)</code>：当前被描述的注解，会保留到class字节码文件中，并被JVM读取到</li>
-</ul>
-</li>
-<li><code>@Documented</code>：描述注解是否被抽取到api文档中</li>
-<li><code>@Inherited</code>：描述注解是否被子类继承</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ul>
-<li><h6 id="在程序使用-解析-注解：获取注解中定义的属性值"><a href="#在程序使用-解析-注解：获取注解中定义的属性值" class="headerlink" title="在程序使用(解析)注解：获取注解中定义的属性值"></a>在程序使用(解析)注解：获取注解中定义的属性值</h6><ol>
-<li><p>获取注解定义的位置的对象  （Class，Method,Field）</p>
-</li>
-<li><p>获取指定的注解</p>
-<ul>
-<li><p><code>getAnnotation(Class)</code><br>//其实就是在内存中生成了一个该注解接口的子类实现对象</p>
-<pre><code>public class ProImpl implements Pro{
-    public String className(){
-        return &quot;cn.itcast.annotation.Demo1&quot;;
-    }
-    public String methodName(){
-        return &quot;show&quot;;
-    }
-}</code></pre></li>
-</ul>
-</li>
-<li><p>调用注解中的抽象方法获取配置的属性值</p>
-</li>
-</ol>
-</li>
-</ul>
-<hr>
-<ul>
-<li><h6 id="小结："><a href="#小结：" class="headerlink" title="小结："></a>小结：</h6><ol>
-<li>以后大多数时候，我们会使用注解，而不是自定义注解</li>
-<li>注解给谁用？<ol>
-<li>编译器</li>
-<li>给解析程序用</li>
-</ol>
-</li>
-<li>注解不是程序的一部分，可以理解为注解就是一个标签</li>
-</ol>
-</li>
-</ul>
+        <p>aaaaaa</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 欢迎转载，有问题邮件至 750638068@qq.com </span>
@@ -600,12 +476,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>注解</p>
+    <p><span class="copy-title">文章标题:</span>Shell</p>
     
     <p><span class="copy-title">本文作者:</span><a  title="yunbingH">yunbingH</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-03-09, 10:57:09</p>
-    <p><span class="copy-title">最后更新:</span>2020-03-09, 11:41:17</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/03/09/%E6%B3%A8%E8%A7%A3/" title="注解">http://yoursite.com/2020/03/09/%E6%B3%A8%E8%A7%A3/</a>
+    <p><span class="copy-title">发布时间:</span>2020-03-21, 12:54:19</p>
+    <p><span class="copy-title">最后更新:</span>2020-03-21, 13:11:24</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/03/21/Shell/" title="Shell">http://yoursite.com/2020/03/21/Shell/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
